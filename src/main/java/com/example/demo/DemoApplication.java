@@ -16,10 +16,10 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/")
 	String sayHello() {
-		return "Hello World!!!Azure!!!!";
+		return "Hello World!!!!!!!";
 	}
 	@RequestMapping("/helloAzure")
 	String sayHelloAzure() {
-		return "Hello World!!!Azure!!!!";
+		return "Hello World!!!Azure!333333!!!";
 	}
 }
