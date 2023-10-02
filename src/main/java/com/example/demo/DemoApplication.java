@@ -16,7 +16,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/")
 	String sayHello() {
-		return "Hello World!!!!!!!";
+		return "<a herf='https://func-upskill-chi-node.azurewebsites.net/api/VotingList?id=1&catalog=GOOD&code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA=='>いいね！</a>";
 	}
 	@RequestMapping("/helloAzure")
 	String sayHelloAzure() {
