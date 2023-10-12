@@ -21,6 +21,6 @@ public class DemoApplication extends SpringBootServletInitializer {
 	}
 	@RequestMapping("/helloAzure")
 	String sayHelloAzure() {
-		return "Hello World!!!Azure!333333!!!";
+		return "<script>alert('Hello World!!!Azure!');</script>";
 	}
 }
