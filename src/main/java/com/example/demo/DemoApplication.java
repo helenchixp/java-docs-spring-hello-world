@@ -54,7 +54,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"<body>	\r\n" +
 			"  <h2>Sample Web Application To Deploy and Test</h2>	\r\n" +
 			"  <br>	\r\n" +
-			"  <div id="beforeend"></div>	\r\n" +
+			"  <div id=\"beforeend\"></div>	\r\n" +
 			"</body>	\r\n" +
 			"</html>	\r\n" ;
 
