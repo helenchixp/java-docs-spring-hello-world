@@ -17,7 +17,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 	@RequestMapping("/")
 	String showListPage() {
 		return "<script>" + 
-			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';//jsonへのパス	\r\n" +
+			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';\r\n" +
 			"	let request = new XMLHttpRequest();	\r\n" +
 			"	request.open('GET', requestURL);	\r\n" +
 			"	request.responseType = 'json';	\r\n" +
