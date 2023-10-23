@@ -14,6 +14,41 @@ public class DemoApplication extends SpringBootServletInitializer {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+	@RequestMapping("/")
+	String showListPage() {
+		return "<script>" + 
+			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';//jsonへのパス	" +
+			"	let request = new XMLHttpRequest();	" +
+			"	request.open('GET', requestURL);	" +
+			"	request.responseType = 'json';	" +
+			"	request.send();	" +
+			"		" +
+			"	// JSONデータをJavaScriptオブジェクトに変換	" +
+			"	request.onload = function () {	" +
+			"	  let data = request.response;	" +
+			"	  data = JSON.parse(JSON.stringify(data));	" +
+			"	  dataArray(data);	" +
+			"	}	" +
+			"		" +
+			"	// foreachでJSONデータをHTMLに出力	" +
+			"	function dataArray(els) {	" +
+			"	  // JSONデータを出力したいHTML要素を指定	" +
+			"	  let array = document.querySelector('.array');	" +
+			"	  els.forEach(el => {	" +
+			"	    let title = el.title;	" +
+			"	    let goodCount = el.goodCount;	" +
+			"	    let badCount = el.badCount;	" +
+			"	    let code = '<ul>'+	" +
+			"	    '<li>投稿' + title + '</li>'+	" +
+			"	    '<li>学年：' + goodCount + '年</li>'+	" +
+			"	    '<li>国語：' + badCount + '点</li>'+	" +
+			"	    '</ul>';	" +
+			"	    array.insertAdjacentHTML('beforeend',code);	" +
+			"	  });	" +
+			"	}	" ;
+
+	}
+
 	@RequestMapping("/post")
 	String sayHello() {
 		return " <form action='https://func-upskill-chi-node.azurewebsites.net/api/Post' method='GET'> " +
