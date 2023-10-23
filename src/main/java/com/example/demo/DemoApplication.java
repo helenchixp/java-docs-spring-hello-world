@@ -14,7 +14,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping("/post")
 	String sayHello() {
 		return " <form action='https://func-upskill-chi-node.azurewebsites.net/api/Post' method='GET'> " +
 			"  <div>" +
