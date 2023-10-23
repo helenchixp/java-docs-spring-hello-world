@@ -17,35 +17,35 @@ public class DemoApplication extends SpringBootServletInitializer {
 	@RequestMapping("/")
 	String showListPage() {
 		return "<script>" + 
-			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';//jsonへのパス	" +
-			"	let request = new XMLHttpRequest();	" +
-			"	request.open('GET', requestURL);	" +
-			"	request.responseType = 'json';	" +
-			"	request.send();	" +
-			"		" +
-			"	// JSONデータをJavaScriptオブジェクトに変換	" +
-			"	request.onload = function () {	" +
-			"	  let data = request.response;	" +
-			"	  data = JSON.parse(JSON.stringify(data));	" +
-			"	  dataArray(data);	" +
-			"	}	" +
-			"		" +
-			"	// foreachでJSONデータをHTMLに出力	" +
-			"	function dataArray(els) {	" +
-			"	  // JSONデータを出力したいHTML要素を指定	" +
-			"	  let array = document.querySelector('.array');	" +
-			"	  els.forEach(el => {	" +
-			"	    let title = el.title;	" +
-			"	    let goodCount = el.goodCount;	" +
-			"	    let badCount = el.badCount;	" +
-			"	    let code = '<ul>'+	" +
-			"	    '<li>投稿' + title + '</li>'+	" +
-			"	    '<li>学年：' + goodCount + '年</li>'+	" +
-			"	    '<li>国語：' + badCount + '点</li>'+	" +
-			"	    '</ul>';	" +
-			"	    array.insertAdjacentHTML('beforeend',code);	" +
-			"	  });	" +
-			"	}	" ;
+			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';//jsonへのパス	\r\n" +
+			"	let request = new XMLHttpRequest();	\r\n" +
+			"	request.open('GET', requestURL);	\r\n" +
+			"	request.responseType = 'json';	\r\n" +
+			"	request.send();	\r\n" +
+			"		\r\n" +
+			"	// JSONデータをJavaScriptオブジェクトに変換	\r\n" +
+			"	request.onload = function () {	\r\n" +
+			"	  let data = request.response;	\r\n" +
+			"	  data = JSON.parse(JSON.stringify(data));	\r\n" +
+			"	  dataArray(data);	\r\n" +
+			"	}	\r\n" +
+			"		\r\n" +
+			"	// foreachでJSONデータをHTMLに出力	\r\n" +
+			"	function dataArray(els) {	\r\n" +
+			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
+			"	  let array = document.querySelector('.array');	\r\n" +
+			"	  els.forEach(el => {	\r\n" +
+			"	    let title = el.title;	\r\n" +
+			"	    let goodCount = el.goodCount;	\r\n" +
+			"	    let badCount = el.badCount;	\r\n" +
+			"	    let code = '<ul>'+	\r\n" +
+			"	    '<li>投稿' + title + '</li>'+	\r\n" +
+			"	    '<li>学年：' + goodCount + '年</li>'+	\r\n" +
+			"	    '<li>国語：' + badCount + '点</li>'+	\r\n" +
+			"	    '</ul>';	\r\n" +
+			"	    array.insertAdjacentHTML('beforeend',code);	\r\n" +
+			"	  });	\r\n" +
+			"	}	\r\n" ;
 
 	}
 
