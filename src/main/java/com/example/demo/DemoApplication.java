@@ -37,7 +37,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 		ResultSet resultSet = null;
 
 		StringBuilder sb = new StringBuilder();
-		
+
 		try (Connection connection = DriverManager.getConnection(connectionUrl);
 			Statement statement = connection.createStatement();) {
 
@@ -52,7 +52,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			}
 		}
 		catch (SQLException e) {
-			e.printStackTrace();
+			sb.append(e.printStackTrace());
 		}
 
 
