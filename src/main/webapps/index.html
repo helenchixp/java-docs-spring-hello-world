@@ -3,10 +3,44 @@
         <title>SampleWebApp</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+// XMLHttpRequestを使ってjsonデータを読み込む
+let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';//jsonへのパス
+let request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+ 
+// JSONデータをJavaScriptオブジェクトに変換
+request.onload = function () {
+  let data = request.response;
+  data = JSON.parse(JSON.stringify(data));
+  dataArray(data);
+}
+ 
+// foreachでJSONデータをHTMLに出力
+function dataArray(els) {
+  // JSONデータを出力したいHTML要素を指定
+  let array = document.querySelector('.array');
+  els.forEach(el => {
+    let title = el.title;
+    let goodCount = el.goodCount;
+    let badCount = el.badCount;
+    let code = '<ul>'+
+    '<li>投稿' + title + '</li>'+
+    '<li>学年：' + goodCount + '年</li>'+
+    '<li>国語：' + badCount + '点</li>'+
+    '</ul>';
+    array.insertAdjacentHTML('beforeend',code);
+  });
+}
+
+        </script>
     </head>
     <body>
         <h2>Sample Web Application To Deploy and Test</h2>
         <br>
+        <div id="beforeend"></div>
     <div> click <a href="SnoopServlet">Click to Invoke a SnoopServlet</a></div>
     <br>
     <br>   

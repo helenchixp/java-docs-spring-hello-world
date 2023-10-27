@@ -1,5 +1,10 @@
 package com.example.demo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -10,12 +15,50 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoApplication extends SpringBootServletInitializer {
 
+	private final String connectionUrl =
+	"jdbc:sqlserver://sql-skillup-chi.database.windows.net:1433;"
+	+ "database=upskilling-chi;"
+	+ "user=admin-chi;"
+	+ "password=Asdf1234;"
+	+ "encrypt=true;"
+	+ "trustServerCertificate=false;"
+	+ "loginTimeout=30;";
+
+
+	private final String query = "SELECT ID,TITLE,GOOD_COUNT,BAD_COUNT FROM T_COMMENT"
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
 	@RequestMapping("/")
 	String showListPage() {
+
+		ResultSet resultSet = null;
+
+		try (Connection connection = DriverManager.getConnection(connectionUrl);
+			Statement statement = connection.createStatement();) {
+
+			// Create and execute a SELECT SQL statement.
+			//String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
+			resultSet = statement.executeQuery(query);
+			StringBuilder sb = new StringBuilder();
+			// Print results from select statement
+			while (resultSet.next()) {
+				//System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
+				sb.append(resultSet.getString(2));
+				sb.append("\n");
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+
+		return sb.toString();
+
+		/*
+
 		return"	<html>	\r\n" +
 			"<head>	\r\n" +
 			"<title>SampleWebApp</title>	\r\n" +
@@ -57,7 +100,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"  <div id=\"beforeend\"></div>	\r\n" +
 			"</body>	\r\n" +
 			"</html>	\r\n" ;
-
+ 			*/
 	}
 
 	@RequestMapping("/post")
