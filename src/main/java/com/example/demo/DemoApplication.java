@@ -36,13 +36,14 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 		ResultSet resultSet = null;
 
+		StringBuilder sb = new StringBuilder();
+		
 		try (Connection connection = DriverManager.getConnection(connectionUrl);
 			Statement statement = connection.createStatement();) {
 
 			// Create and execute a SELECT SQL statement.
 			//String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
 			resultSet = statement.executeQuery(query);
-			StringBuilder sb = new StringBuilder();
 			// Print results from select statement
 			while (resultSet.next()) {
 				//System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
