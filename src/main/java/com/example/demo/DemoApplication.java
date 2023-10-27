@@ -52,7 +52,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			}
 		}
 		catch (SQLException e) {
-			sb.append(e.printStackTrace().toString());
+			sb.append(e.toString());
 		}
 
 
