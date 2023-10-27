@@ -18,9 +18,10 @@ public class DemoApplication extends SpringBootServletInitializer {
 	private final String connectionUrl =
 	"jdbc:sqlserver://sql-skillup-chi.database.windows.net:1433;"
 	+ "database=upskilling-chi;"
-	+ "user=admin-chi;"
+	+ "user=admin-chi@sql-skillup-chi;"
 	+ "password=Asdf1234;"
 	+ "encrypt=true;"
+	+ "hostNameInCertificate=*.database.windows.net;"
 	+ "trustServerCertificate=false;"
 	+ "loginTimeout=30;";
 
