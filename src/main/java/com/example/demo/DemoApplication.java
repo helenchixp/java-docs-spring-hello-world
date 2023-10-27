@@ -25,7 +25,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 	+ "loginTimeout=30;";
 
 
-	private final String query = "SELECT ID,TITLE,GOOD_COUNT,BAD_COUNT FROM T_COMMENT"
+	private final String query = "SELECT ID,TITLE,GOOD_COUNT,BAD_COUNT FROM T_COMMENT";
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
