@@ -83,6 +83,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    console.error('Request failed. Status code: ' + request.status); \r\n" +
 			"	  }\r\n" +
 			"	}\r\n" +
+			"	request.send(); \r\n" +
 			"	// foreachでJSONデータをHTMLに出力	\r\n" +
 			"	function dataArray(els) {	\r\n" +
 			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
