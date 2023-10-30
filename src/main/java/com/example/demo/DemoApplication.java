@@ -59,8 +59,10 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 		return sb.toString();
 
-		/*
-
+	}
+	@RequestMapping("/votingList")
+	
+	String showListPage2() {
 		return"	<html>	\r\n" +
 			"<head>	\r\n" +
 			"<title>SampleWebApp</title>	\r\n" +
@@ -102,7 +104,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"  <div id=\"beforeend\"></div>	\r\n" +
 			"</body>	\r\n" +
 			"</html>	\r\n" ;
- 			*/
+ 			
 	}
 
 	@RequestMapping("/post")
