@@ -70,16 +70,19 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';\r\n" +
 			"	let request = new XMLHttpRequest();	\r\n" +
 			"	request.open('GET', requestURL);	\r\n" +
-			"	request.responseType = 'json';	\r\n" +
-			"	request.send();	\r\n" +
+			"	//request.responseType = 'json';	\r\n" +
+			"	//request.send();	\r\n" +
 			"		\r\n" +
 			"	// JSONデータをJavaScriptオブジェクトに変換	\r\n" +
 			"	request.onload = function () {	\r\n" +
-			"	  let data = request.response;	\r\n" +
-			"	  data = JSON.parse(JSON.stringify(data));	\r\n" +
-			"	  dataArray(data);	\r\n" +
-			"	}	\r\n" +
-			"		\r\n" +
+			"	  if (request.status === 200) {\r\n" +
+			"	    let data = request.response;	\r\n" +
+			"	    data = JSON.parse(JSON.stringify(data));	\r\n" +
+			"	    dataArray(data);	\r\n" +
+			"	  } else	{\r\n" +
+			"	    console.error('Request failed. Status code: ' + request.status); \r\n" +
+			"	  }\r\n" +
+			"	}\r\n" +
 			"	// foreachでJSONデータをHTMLに出力	\r\n" +
 			"	function dataArray(els) {	\r\n" +
 			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
