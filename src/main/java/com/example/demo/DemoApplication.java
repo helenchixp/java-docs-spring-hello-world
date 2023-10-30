@@ -66,12 +66,12 @@ public class DemoApplication extends SpringBootServletInitializer {
 		return"	<html>	\r\n" +
 			"<head>	\r\n" +
 			"<title>SampleWebApp</title>	\r\n" +
-			"<script>	\r\n" + 
+			"<script  type=\"text/javascript\">	\r\n" + 
 			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';\r\n" +
 			"	let request = new XMLHttpRequest();	\r\n" +
 			"	request.open('GET', requestURL);	\r\n" +
-			"	//request.responseType = 'json';	\r\n" +
-			"	//request.send();	\r\n" +
+			"	request.responseType = 'json';	\r\n" +
+			"	request.withCredentials = true; ;	\r\n" +
 			"		\r\n" +
 			"	// JSONデータをJavaScriptオブジェクトに変換	\r\n" +
 			"	request.onload = function () {	\r\n" +
