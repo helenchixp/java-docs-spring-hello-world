@@ -102,7 +102,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    '<li>学年：' + goodCount + '年</li>'+	\r\n" +
 			"	    '<li>国語：' + badCount + '点</li>'+	\r\n" +
 			"	    '</ul>';	\r\n" +
-			"	    array.html(code);	\r\n" +
+			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });	\r\n" +
 			"	}	\r\n" +
 			" </script>	\r\n" +
