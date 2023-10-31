@@ -66,6 +66,11 @@ public class DemoApplication extends SpringBootServletInitializer {
 		return"	<html>	\r\n" +
 			"<head>	\r\n" +
 			"<title>SampleWebApp</title>	\r\n" +
+			"</head>	\r\n" +
+			"<body>	\r\n" +
+			"  <h2>Sample Web Application To Deploy and Test</h2>	\r\n" +
+			"  <br>	\r\n" +
+			"  <div id=\"beforeend\"></div>	\r\n" +
 			"<script  type=\"text/javascript\">	\r\n" + 
 			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';\r\n" +
 			"	let request = new XMLHttpRequest();	\r\n" +
@@ -101,11 +106,6 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	  });	\r\n" +
 			"	}	\r\n" +
 			" </script>	\r\n" +
-			"</head>	\r\n" +
-			"<body>	\r\n" +
-			"  <h2>Sample Web Application To Deploy and Test</h2>	\r\n" +
-			"  <br>	\r\n" +
-			"  <div id=\"beforeend\"></div>	\r\n" +
 			"</body>	\r\n" +
 			"</html>	\r\n" ;
  			
