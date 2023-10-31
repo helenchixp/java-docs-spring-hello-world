@@ -98,9 +98,9 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    let goodCount = el.goodCount;	\r\n" +
 			"	    let badCount = el.badCount;	\r\n" +
 			"	    let code = '<ul>'+	\r\n" +
-			"	    '<li>投稿' + title + '</li>'+	\r\n" +
-			"	    '<li>学年：' + goodCount + '年</li>'+	\r\n" +
-			"	    '<li>国語：' + badCount + '点</li>'+	\r\n" +
+			"	    '<li>投稿' + title + \r\n" +
+			"	    '<a>いいね：' + goodCount + '</a>'+	\r\n" +
+			"	    '<a>だめね：' + badCount + '</a></li>'+	\r\n" +
 			"	    '</ul>';	\r\n" +
 			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });	\r\n" +
