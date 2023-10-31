@@ -70,8 +70,8 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"<body>	\r\n" +
 			"  <h2>Sample Web Application To Deploy and Test</h2>	\r\n" +
 			"  <br>	\r\n" +
-			"  <div class=\"array\"></div>	\r\n" +
-			"<script  type=\"text/javascript\">	\r\n" + 
+			"  <div class=\"array\" id=\"array\"></div>\r\n" +
+			"  <script  type=\"text/javascript\">\r\n" + 
 			"	let requestURL = 'https://func-upskill-chi-node.azurewebsites.net/api/VotingList?code=mE9h8puZtTT2VqfsedWKIKQsH1XFMDt-1HYb557BdasmAzFu8fCxHA==';\r\n" +
 			"	let request = new XMLHttpRequest();	\r\n" +
 			"	request.open('GET', requestURL);	\r\n" +
@@ -92,7 +92,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	// foreachでJSONデータをHTMLに出力	\r\n" +
 			"	function dataArray(els) {	\r\n" +
 			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
-			"	  let array = document.getElementsByClassName('array');	\r\n" +
+			"	  let array = document.getElementById('array');	\r\n" +
 			"	  els.forEach(el => {	\r\n" +
 			"	    let title = el.title;	\r\n" +
 			"	    let goodCount = el.goodCount;	\r\n" +
@@ -105,7 +105,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });	\r\n" +
 			"	}	\r\n" +
-			" </script>	\r\n" +
+			"   </script>	\r\n" +
 			"</body>	\r\n" +
 			"</html>	\r\n" ;
  			
