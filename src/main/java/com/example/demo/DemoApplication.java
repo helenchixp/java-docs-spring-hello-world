@@ -92,7 +92,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	// foreachでJSONデータをHTMLに出力	\r\n" +
 			"	function dataArray(els) {	\r\n" +
 			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
-			"	  let array = document.querySelector('.array');	\r\n" +
+			"	  let array = document.getElementsByClassName('array');	\r\n" +
 			"	  els.forEach(el => {	\r\n" +
 			"	    let title = el.title;	\r\n" +
 			"	    let goodCount = el.goodCount;	\r\n" +
@@ -102,7 +102,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    '<li>学年：' + goodCount + '年</li>'+	\r\n" +
 			"	    '<li>国語：' + badCount + '点</li>'+	\r\n" +
 			"	    '</ul>';	\r\n" +
-			"	    array.insertAdjacentHTML('beforeend',code);	\r\n" +
+			"	    array.html(code);	\r\n" +
 			"	  });	\r\n" +
 			"	}	\r\n" +
 			" </script>	\r\n" +
