@@ -68,7 +68,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"<title>SampleWebApp</title>	\r\n" +
 			"</head>	\r\n" +
 			"<body>	\r\n" +
-			"  <h2>Sample Web Application To Deploy and Test</h2>	\r\n" +
+			"  <h2>ようこそ！！！投稿一覧</h2>	\r\n" +
 			"  <br>	\r\n" +
 			"  <div class=\"array\" id=\"array\"></div>\r\n" +
 			"  <script  type=\"text/javascript\">\r\n" + 
