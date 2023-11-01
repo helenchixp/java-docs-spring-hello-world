@@ -95,20 +95,25 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	  let array = document.getElementById('array');	\r\n" +
 			"	  els.forEach(el => {	\r\n" +
 			"	    let title = el.title;	\r\n" +
+			"	    let id = el.id;	\r\n" +
 			"	    let goodCount = el.goodCount;	\r\n" +
 			"	    let badCount = el.badCount;	\r\n" +
 			"	    let code = '<ul>'+	\r\n" +
 			"	    '<li>投稿' + title + \r\n" +
 			//"	    '<input type=\"button\" value=\"いいね：' + goodCount + '\" onclick=\"alert()\">' + \r\n" +
 			//"	    '<input type=\"button\" value=\"だめね：' + badCount + '\" onclick=\"alert()\"></li>' + \r\n" +
-			"	    '<a  onclick=\"vote(1)\">いいね：' + goodCount + '</a>' + \r\n" +
-			"	    '<a >だめね：' + badCount + '</a></li>' + \r\n" +
+			"	    ' <a href=\"#\" onclick=\"vote(1, '+ id +')\">いいね：' + goodCount + '</a>' + \r\n" +
+			"	    ' <a href=\"#\" >だめね：' + badCount + '</a></li>' + \r\n" +
 			"	    '</li></ul>';	\r\n" +
 			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });\r\n" +
 			"	}\r\n" +
-			"	function vote(kubun) {\r\n" +
-			"		alert(kubun);\r\n" +
+			"	function vote(kubun, id) {\r\n" +
+			"	   var url='https://func-upskill-chi-node.azurewebsites.net/api/Voting?id=' + id + '&code=PhTjlcPal5ANrJiefgMDNXHVbyXCjs4ssYUYF9PqaH04AzFuQPWDsA==';\r\n" +
+			"	   request.open('GET', url);\r\n" +
+			"	   request.send();\r\n" +
+			"		\r\n" +
+			"		\r\n" +
 			"	}\r\n" +
 			"   </script>	\r\n" +
 			"</body>	\r\n" +
