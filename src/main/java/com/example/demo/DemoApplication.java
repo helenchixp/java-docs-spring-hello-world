@@ -90,7 +90,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	}\r\n" +
 			"	request.send(); \r\n" +
 			"	// foreachでJSONデータをHTMLに出力	\r\n" +
-			"	function dataArray(els) {	\r\n" +
+			"	function dataArray(els) {\r\n" +
 			"	  // JSONデータを出力したいHTML要素を指定	\r\n" +
 			"	  let array = document.getElementById('array');	\r\n" +
 			"	  els.forEach(el => {	\r\n" +
@@ -101,11 +101,14 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    '<li>投稿' + title + \r\n" +
 			//"	    '<input type=\"button\" value=\"いいね：' + goodCount + '\" onclick=\"alert()\">' + \r\n" +
 			//"	    '<input type=\"button\" value=\"だめね：' + badCount + '\" onclick=\"alert()\"></li>' + \r\n" +
-			"	    '<a >いいね：' + goodCount + '</a>' + \r\n" +
+			"	    '<a  onclick=\"vote(1)\">いいね：' + goodCount + '</a>' + \r\n" +
 			"	    '<a >だめね：' + badCount + '</a></li>' + \r\n" +
-			"	    '</ul>';	\r\n" +
+			"	    '</li></ul>';	\r\n" +
 			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });\r\n" +
+			"	}\r\n" +
+			"	function vote(kubun) {\r\n" +
+			"		alert(kubun);\r\n" +
 			"	}\r\n" +
 			"   </script>	\r\n" +
 			"</body>	\r\n" +
