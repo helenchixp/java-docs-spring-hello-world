@@ -99,7 +99,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	    let goodCount = el.goodCount;	\r\n" +
 			"	    let badCount = el.badCount;	\r\n" +
 			"	    let code = '<ul>'+	\r\n" +
-			"	    '<li>投稿' + title + \r\n" +
+			"	    '<li>' + title + \r\n" +
 			//"	    '<input type=\"button\" value=\"いいね：' + goodCount + '\" onclick=\"alert()\">' + \r\n" +
 			//"	    '<input type=\"button\" value=\"だめね：' + badCount + '\" onclick=\"alert()\"></li>' + \r\n" +
 			"	    ' <a href=\"#\" onclick=\"vote(1, '+ id +')\">いいね：' + goodCount + '</a>' + \r\n" +
