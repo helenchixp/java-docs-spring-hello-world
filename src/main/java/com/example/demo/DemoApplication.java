@@ -112,7 +112,7 @@ public class DemoApplication extends SpringBootServletInitializer {
 			"	   var url='https://func-upskill-chi-node.azurewebsites.net/api/Voting?id=' + id + '&code=PhTjlcPal5ANrJiefgMDNXHVbyXCjs4ssYUYF9PqaH04AzFuQPWDsA==';\r\n" +
 			"	   request.open('GET', url);\r\n" +
 			"	   request.send();\r\n" +
-			"		\r\n" +
+			"          location.reload()\r\n" +
 			"		\r\n" +
 			"	}\r\n" +
 			"   </script>	\r\n" +
