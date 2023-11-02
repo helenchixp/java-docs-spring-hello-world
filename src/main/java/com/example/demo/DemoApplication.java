@@ -103,12 +103,13 @@ public class DemoApplication extends SpringBootServletInitializer {
 			//"	    '<input type=\"button\" value=\"いいね：' + goodCount + '\" onclick=\"alert()\">' + \r\n" +
 			//"	    '<input type=\"button\" value=\"だめね：' + badCount + '\" onclick=\"alert()\"></li>' + \r\n" +
 			"	    ' <a href=\"#\" onclick=\"vote(1, '+ id +')\">いいね：' + goodCount + '</a>' + \r\n" +
-			"	    ' <a href=\"#\" onclick=\"vote(1, '+ id +', 'BAD')\">だめね：' + badCount + '</a></li>' + \r\n" +
+			"	    ' <a href=\"#\" onclick=\"vote(1, '+ id +', 2)\">だめね：' + badCount + '</a></li>' + \r\n" +
 			"	    '</li></ul>';	\r\n" +
 			"	    array.insertAdjacentHTML('beforebegin', code);	\r\n" +
 			"	  });\r\n" +
 			"	}\r\n" +
 			"	function vote(kubun, id, catalog) {\r\n" +
+			"	   if (catalog == 2) catalog = 'BAD';\r\n" +
 			"	   var url='https://func-upskill-chi-node.azurewebsites.net/api/Voting?id=' + id + '&catalog=' + catalog + '&code=PhTjlcPal5ANrJiefgMDNXHVbyXCjs4ssYUYF9PqaH04AzFuQPWDsA==';\r\n" +
 			"	   request.open('GET', url);\r\n" +
 			"	   request.send();\r\n" +
